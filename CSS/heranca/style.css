@@ -1,0 +1,17 @@
+header{
+    background-color: beige;
+    color: burlywood;
+    text-align:center;
+    padding: 1rem;
+}
+
+.parent{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    color: chocolate;
+}
+
+.child{
+    font-size: 2rem;
+    color: cyan;
+}
