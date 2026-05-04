@@ -1,0 +1,10 @@
+#axul{
+    color: blue;
+}
+h1[class="verde"]{
+    color: green;
+}
+
+h1{
+    color: salmon !important;
+}
