@@ -1,0 +1,30 @@
+:root {
+    --cor-principal: #3498db;
+    --cor-claro: #c5e4d2;
+    --cor-escuro: #2c3e50;
+    --preenchiemento-pq:1rem;
+    --preenchiemento-md:2rem;
+    --preenchiemento-gr:4rem;
+}
+
+header{
+    background-color: var(--cor-escuro);
+    color: var(--cor-claro);
+    padding: var(--preenchiemento-pq);
+}
+
+section{
+    background-color: var(--cor-claro);
+    padding: var(--preenchiemento-md);
+}
+
+div{
+    --prencimento-pq: 0.5rem;
+    background-color: var(--cor-principal);
+    color: var(--cor-claro);
+    padding: var(--preenchiemento-pq);
+}
+
+.red-box{
+    --cor-principal: #e74c3c;
+}
