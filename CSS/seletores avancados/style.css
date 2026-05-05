@@ -1,0 +1,41 @@
+/* seletor :nth-child() */
+li:nth-child(2) {
+    color: red;
+}
+
+li:nth-child(3n) {
+    color: blue;
+}
+
+li:nth-child(2n+1) {
+    color: green;
+}
+
+li:nth-child(odd) {
+    color: orange;
+}
+
+li:hover {
+    background-color: purple;
+    color: whitesmoke;
+}
+
+/* pseudo-elementos  -> ::before e ::after */
+li::before {
+    content: "👉";
+    margin-right: 5px;
+}
+
+li::after {
+    content: "👈";
+    margin-left: 5px;
+}
+
+li:first-child {
+    color: powderblue;
+}
+
+li:last-child {
+    color: lightcoral;
+}
+
