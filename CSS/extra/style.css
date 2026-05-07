@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.first{
+    text-align: center;
+    background-color: black;
+    padding: 1.25rem;
+
+}
+.head{
+    color: white;
+    font-size: small;
+    margin: 2rem auto;
+    text-decoration: none;
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    font-style: sans-serif;
+}
+
+.second{
+    position: relative;
+}
+
+.second-img{
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: -10;
+}
+
+.second-div{
+    color: white;
+    padding-top: 20vh;
+    text-align: center;
+}
+
+.second-title{
+    font-size: 3rem;
+    font-weight: 150;
+}
+.second-text{
+    margin-top: 1rem;
+}
+
+.second-button{
+    color: black;
+    background-color: orange;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+}
+
+.third{
+    position: relative;
+}
+.third-title{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.third-card{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
