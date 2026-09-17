@@ -1,76 +1,258 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ========================================================
+   1. RESET GLOBAL
+   Padroniza as medidas e remove espaçamentos padrão de navegadores
+   ======================================================== */
+* {
+    margin: 0;                   /* Remove a margem externa padrão de todas as tags */
+    padding: 0;                  /* Remove o espaçamento interno padrão */
+    box-sizing: border-box;      /* Garante que padding e bordas não alterem a largura final dos elementos */
+    font-family: sans-serif;      /* Define uma tipografia padrão limpa para todo o site */
 }
 
-.first{
-    text-align: center;
-    background-color: black;
-    padding: 1.25rem;
-
-}
-.head{
-    color: white;
-    font-size: small;
-    margin: 2rem auto;
-    text-decoration: none;
-    gap: 30px;
-    padding: 20px;
-    text-align: center;
-    background-color: black;
-    font-style: sans-serif;
+/* ========================================================
+   2. CABEÇALHO / MENU DE NAVEGAÇÃO
+   ======================================================== */
+.first {
+    text-align: center;          /* Centraliza os links do menu na horizontal */
+    background-color: black;     /* Fundo preto da barra superior */
+    padding: 1.25rem;            /* Altura/respiro interno da barra de navegação */
 }
 
-.second{
-    position: relative;
+.head {
+    color: white;                /* Cor branca para o texto dos links */
+    font-size: 0.9rem;           /* Tamanho de fonte discreto */
+    text-decoration: none;       /* Remove o sublinhado padrão dos links <a> */
+    padding: 10px 20px;          /* Área de clique confortável ao redor de cada palavra */
+    font-family: sans-serif;     /* Garante a fonte sem serifa */
+    transition: color 0.2s;       /* Suaviza a transição de cor ao passar o cursor */
 }
 
-.second-img{
-    object-fit: cover;
-    object-position: top;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
+.head:hover {
+    color: orange;               /* Destaca o item em laranja quando o mouse passa por cima */
+}
+
+/* ========================================================
+   3. BANNER PRINCIPAL (HERO)
+   ======================================================== */
+.second {
+    position: relative;          /* Define a seção como referência para a imagem absoluta */
+    height: 80vh;                /* Ocupa 80% da altura da tela visível do usuário */
+    display: flex;               /* Ativa o flexbox para alinhamento rápido */
+    justify-content: center;      /* Centraliza o conteúdo na horizontal */
+    align-items: center;          /* Centraliza o conteúdo na vertical */
+    overflow: hidden;            /* Impede que a foto de fundo ultrapasse os limites da seção */
+}
+
+.second-img {
+    position: absolute;          /* Tira a imagem do fluxo para ela ficar atrás dos textos */
     top: 0;
-    z-index: -10;
+    left: 0;
+    width: 100%;                 /* Ocupa 100% da largura da seção */
+    height: 100%;                /* Ocupa exatamente a mesma altura da seção (80vh) */
+    object-fit: cover;           /* Mantém a proporção da foto sem esticar nem achatar */
+    object-position: center;      /* Foca o enquadramento no meio da imagem */
+    z-index: -1;                 /* Garante que a foto fique por trás do texto */
+    filter: brightness(0.65);     /* Escurece levemente a imagem para destacar o texto branco */
 }
 
-.second-div{
-    color: white;
-    padding-top: 20vh;
+.second-div {
+    color: white;                /* Letras brancas para contraste com o fundo */
+    text-align: center;          /* Alinha o título, texto e botão ao centro */
+    padding: 0 1rem;             /* Margem de segurança para não colar nas bordas em telas pequenas */
+}
+
+.second-title {
+    font-size: 3rem;             /* Tamanho grande de destaque para o nome da pizzaria */
+    font-weight: 300;            /* Espessura de fonte mais fina e sofisticada */
+}
+
+.second-text {
+    margin-top: 1rem;            /* Espaçamento entre o título e a frase descritiva */
+    font-size: 1.1rem;
+}
+
+.second-button {
+    color: black;                /* Texto preto no botão */
+    background-color: #f0a000;   /* Tom de laranja/âmbar idêntico ao modelo */
+    padding: 0.75rem 1.5rem;     /* Tamanho interno do botão */
+    border: none;                /* Remove a borda padrão cinza */
+    border-radius: 6px;          /* Cantos levemente arredondados */
+    margin-top: 1.5rem;          /* Afasta o botão da frase de cima */
+    font-weight: bold;           /* Deixa o texto em negrito */
+    cursor: pointer;             /* Mostra o ícone de mãozinha ao passar o mouse */
+    transition: background-color 0.2s;
+}
+
+.second-button:hover {
+    background-color: #d68f00;   /* Tom um pouco mais escuro ao passar o mouse */
+}
+
+/* ========================================================
+   4. SEÇÃO DO CARDÁPIO
+   ======================================================== */
+.third {
+    padding: 4rem 1rem;          /* Espaçamento amplo superior e inferior */
+    background-color: #f7f7f7;   /* Fundo cinza bem suave */
+}
+
+.third-title {
+    font-size: 2.4rem;           /* Tamanho do título "Cardápio" */
+    font-weight: bold;
+    text-align: center;          /* Centraliza o título */
+    margin-bottom: 2.5rem;       /* Cria espaço entre a palavra e os cards de pizza */
+}
+
+/* Grade que organiza os cards */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria exatamente 3 colunas de larguras iguais */
+    gap: 2rem;                   /* Distância de separação entre um card e outro */
+    max-width: 1100px;           /* Limita a largura para não espalhar demais em monitores grandes */
+    margin: 0 auto;              /* Centraliza a grade inteira na tela */
+}
+
+/* Estrutura de cada card de pizza */
+.card {
+    background-color: #e5e5e5;   /* Cor cinza claro da parte inferior do card */
+    border-radius: 8px;          /* Arredonda os 4 cantos do card */
+    overflow: hidden;            /* Faz a imagem superior respeitar a curva das bordas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra suave para efeito de relevo */
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;               /* Altura fixa para padronizar todas as fotos */
+    object-fit: cover;           /* Evita deformações nas fotos */
+    display: block;              /* Remove o pequeno espaço em branco padrão abaixo de imagens */
+}
+
+/* Área interna de texto de cada card */
+.card-info {
+    padding: 1.25rem;            /* Espaço interno para os textos não tocarem as bordas */
+}
+
+.card-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;       /* Afasta o nome da pizza dos ingredientes */
+    color: #1a1a1a;              /* Cinza bem escuro para o título */
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: #555555;              /* Cinza médio para facilitar a leitura da descrição */
+    line-height: 1.4;            /* Espaçamento entre linhas de texto */
+}
+
+/* ========================================================
+   5. SEÇÃO SOBRE NÓS
+   ======================================================== */
+.about {
+    position: relative;          /* Serve de âncora para a foto com posição absoluta */
+    height: 220px;               /* Faixa horizontal estreita como na referência */
+    display: flex;
+    justify-content: center;     /* Centraliza o bloco de texto na horizontal */
+    align-items: center;         /* Centraliza o bloco de texto na vertical */
+    overflow: hidden;            /* Esconde qualquer sobra da imagem */
     text-align: center;
+    color: white;                /* Letras brancas */
 }
 
-.second-title{
-    font-size: 3rem;
-    font-weight: 150;
-}
-.second-text{
-    margin-top: 1rem;
-}
-
-.second-button{
-    color: black;
-    background-color: orange;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 0.75rem;
-    margin-top: 1rem;
+.about-img {
+    position: absolute;          /* Fica por trás do texto */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;                 /* Camada de fundo */
+    filter: brightness(0.4);     /* Escurece a imagem para o texto ter boa leitura */
 }
 
-.third{
-    position: relative;
+.about-content {
+    max-width: 800px;            /* Evita que o parágrafo estique de ponta a ponta da tela */
+    padding: 0 1.5rem;
 }
-.third-title{
-    font-size: 2rem;
+
+.about-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;      /* Espaço entre "Sobre Nós" e a descrição */
+    font-weight: bold;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.5;            /* Altura confortável de leitura */
+}
+
+/* ========================================================
+   6. SEÇÃO DE CONTATO
+   ======================================================== */
+.contact {
+    padding: 4rem 1rem;
     text-align: center;
-    margin-top: 2rem;
+    background-color: #ffffff;
 }
 
-.third-card{
+.contact-title {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-subtitle {
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+/* Coloca as 3 informações lado a lado */
+.contact-info-container {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto 2.5rem;
+    text-align: left;
+}
+
+.contact-column p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.contact-column a {
+    color: orange;
+    text-decoration: none;
+}
+
+.contact-column a:hover {
+    text-decoration: underline;
+}
+
+/* Botão Peça Agora Mesmo */
+.order-button {
+    background-color: #f0a000;
+    color: black;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.order-button:hover {
+    background-color: #d68f00;
+}
+
+/* ========================================================
+   7. RODAPÉ (FOOTER)
+   ======================================================== */
+footer {
+    background-color: #222222;
+    color: #f0a000;              /* Tom de dourado/amarelo do texto no modelo */
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
 }

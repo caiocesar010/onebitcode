@@ -3,32 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Extra</title>
+    <title>Alessio's Pizzaria</title>
+    <!-- Vincula o arquivo CSS externo de estilos -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <section>
-            <div class="first">
-            <a href="#" class="head">Home</a>
-            <a href="#" class="head">Cardápio</a>
-            <a href="#" class="head">Sobre Nós</a>
-            <a href="#" class="head">Contato</a>
-            </div>
-        </section>
+        <!-- ========================================================
+             1. CABEÇALHO / MENU DE NAVEGAÇÃO
+             Links com âncoras (#id) para rolar a página até a seção
+             ======================================================== -->
+        <header id="home">
+            <nav class="first">
+                <a href="#home" class="head">Home</a>
+                <a href="#cardapio" class="head">Cardápio</a>
+                <a href="#sobre-nos" class="head">Sobre Nós</a>
+                <a href="#contato" class="head">Contato</a>
+            </nav>
+        </header>
         
+        <!-- ========================================================
+             2. BANNER PRINCIPAL (HERO)
+             Foto de destaque com chamada principal e botão de ação
+             ======================================================== -->
         <section class="second">
-                <img class="second-img" src="imagens/pexels-narda-yescas-1566837.jpg" alt="Pizza">
-                <div class="second-div">
-                    <h1 class="second-title">Bem-vindo à Alessio's</h1>
-                    <p class="second-text">Saborosas pizzas feitas espicialmente para você!</p>
-                    <button class="second-button">Ver Cardápio</button>
-                </div>
+            <!-- Imagem de fundo posicionada via CSS atrás do texto -->
+            <img class="second-img" src="imagens/pexels-narda-yescas-1566837.jpg" alt="Forno com pizzas">
+            
+            <div class="second-div">
+                <h1 class="second-title">Bem-vindo à Alessio's</h1>
+                <p class="second-text">Saborosas pizzas feitas especialmente para você!</p>
+                <a href="#cardapio"><button class="second-button">Ver Cardápio</button></a>
+            </div>
         </section>
 
-        <section class="third">
-            <h1 class="third-title">Cardápio</h1>
-            <div class="third-card">
-                <img class="third-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="pizza">
+        <!-- ========================================================
+             3. SEÇÃO DO CARDÁPIO
+             Grade com 12 opções divididas em cards (3 colunas)
+             ======================================================== -->
+        <section class="third" id="cardapio">
+            <h2 class="third-title">Cardápio</h2>
+
+            <!-- Container Grid que organiza os cards em 3 colunas -->
+            <div class="menu-container">
+
+                <!-- Pizza 1 -->
+                <div class="card">
+                    <img class="card-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="Pizza Margherita">
+                    <div class="card-info">
+                        <h3>Pizza Margherita</h3>
+                        <p>Molho de tomate, mussarela, manjericão fresco.</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 2 -->
+                <div class="card">
+                    <img class="card-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="Pizza Pepperoni">
+                    <div class="card-info">
+                        <h3>Pizza Pepperoni</h3>
+                        <p>Molho de tomate, pepperoni, queijo mussarela.</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 3 -->
+                <div class="card">
+                    <img class="card-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="Pizza Quatro Queijos">
+                    <div class="card-info">
+                        <h3>Pizza Quatro Queijos</h3>
+                        <p>Molho de tomate, mussarela, parmesão, gorgonzola, provolone.</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 4 -->
+                <div class="card">
+                    <img class="card-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="Pizza Calabresa">
+                    <div class="card-info">
+                        <h3>Pizza Calabresa</h3>
+                        <p>Molho de tomate, calabresa, cebola, queijo mussarela.</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 5 -->
+                <div class="card">
+                    <img class="card-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="Pizza Vegetariana">
+                    <div class="card-info">
+                        <h3>Pizza Vegetariana</h3>
+                        <p>Molho de tomate, pimentões, cogumelos, azeitonas, queijo mussarela.</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 6 -->
+                <div class="card">
+                    <img class="card-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="Pizza Frango com Catupiry">
+                    <div class="card-info">
+                        <h3>Pizza Frango com Catupiry</h3>
+                        <p>Molho de tomate, frango desfiado, catupiry, milho, queijo mussarela.</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 7 -->
+                <div class="card">
+                    <img class="card-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="Pizza Portuguesa">
+                    <div class="card-info">
+                        <h3>Pizza Portuguesa</h3>
+                        <p>Molho de tomate, presunto, ovos, cebola, azeitonas, queijo mussarela.</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 8 -->
+                <div class="card">
+                    <img class="card-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="Pizza Supreme">
+                    <div class="card-info">
+                        <h3>Pizza Supreme</h3>
+                        <p>Molho de tomate, pepperoni, pimentões, cebola roxa, azeitonas, queijo mussarela.</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 9 -->
+                <div class="card">
+                    <img class="card-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="Pizza Tropical">
+                    <div class="card-info">
+                        <h3>Pizza Tropical</h3>
+                        <p>Molho de tomate, presunto, abacaxi, queijo mussarela.</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 10 -->
+                <div class="card">
+                    <img class="card-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="Pizza Margherita Especial">
+                    <div class="card-info">
+                        <h3>Pizza Margherita Especial</h3>
+                        <p>Molho de tomate, mussarela de búfala, tomate fresco, manjericão, azeite de oliva.</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 11 -->
+                <div class="card">
+                    <img class="card-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="Pizza Carne de Sol">
+                    <div class="card-info">
+                        <h3>Pizza Carne de Sol</h3>
+                        <p>Molho de tomate, carne de sol desfiada, cebola roxa, queijo mussarela.</p>
+                    </div>
+                </div>
+
+                <!-- Pizza 12 -->
+                <div class="card">
+                    <img class="card-img" src="imagens/pexels-engin-akyurt-2260208.jpg" alt="Pizza Caprese">
+                    <div class="card-info">
+                        <h3>Pizza Caprese</h3>
+                        <p>Molho de tomate, tomate fresco, mussarela de búfala, manjericão, azeite de oliva.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
+
+        <!-- ========================================================
+             4. SEÇÃO SOBRE NÓS
+             Faixa horizontal com foto escurecida ao fundo
+             ======================================================== -->
+        <section class="about" id="sobre-nos">
+            <img class="about-img" src="imagens/pexels-narda-yescas-1566837.jpg" alt="Preparação de pizzas">
+            <div class="about-content">
+                <h2>Sobre Nós</h2>
+                <p>Nossa pizzaria é dedicada a criar as melhores pizzas do mundo, com ingredientes frescos e receitas exclusivas.</p>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             5. SEÇÃO DE CONTATO
+             Informações de localização, atendimento e botão de pedido
+             ======================================================== -->
+        <section class="contact" id="contato">
+            <h2 class="contact-title">Contato</h2>
+            <p class="contact-subtitle">Entre em contato conosco para fazer pedidos ou tirar suas dúvidas.</p>
+
+            <!-- Grade com 3 colunas de dados -->
+            <div class="contact-info-container">
+                <!-- Coluna 1: Endereço -->
+                <div class="contact-column">
+                    <p><strong>Endereço:</strong> Avenida Onze de Outubro, nº 123</p>
+                    <p>Centro, Cidade Qualquer/RJ CEP: 12345-678</p>
+                </div>
+
+                <!-- Coluna 2: Meios de Contato -->
+                <div class="contact-column">
+                    <p><strong>Telefone:</strong> (11) 5555-5555</p>
+                    <p><strong>E-mail:</strong> <a href="mailto:contato@alessios.pizza">contato@alessios.pizza</a></p>
+                </div>
+
+                <!-- Coluna 3: Horários -->
+                <div class="contact-column">
+                    <p><strong>Horário de Funcionamento:</strong></p>
+                    <p>Segunda a Sábado: 11h00 às 23h00</p>
+                    <p>Domingo: 16h00 às 23h00</p>
+                </div>
+            </div>
+
+            <!-- Botão de ação final -->
+            <button class="order-button">Peça agora mesmo!</button>
+        </section>
+    </main>
+
+    <!-- ========================================================
+         6. RODAPÉ (FOOTER)
+         Barra preta inferior com direitos autorais
+         ======================================================== -->
+    <footer>
+        <p>&copy; 2023 Alessio's Pizzaria</p>
+    </footer>
+</body>
+</html>
