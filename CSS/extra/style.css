@@ -256,3 +256,102 @@ footer {
     padding: 1.5rem;
     font-size: 0.9rem;
 }
+/* ========================================================
+   8. RESPONSIVIDADE (TABLETS E TELEMÓVEIS)
+   ======================================================== */
+
+/* Ajustes para tablets e ecrãs intermédios (até 900px) */
+@media (max-width: 900px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr); /* Reduz de 3 para 2 colunas */
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .contact-info-container {
+        flex-direction: column;               /* Empilha as 3 colunas de contacto */
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+}
+
+/* Ajustes específicos para telemóveis (ecrãs até 600px) */
+@media (max-width: 600px) {
+    /* Menu Superior */
+    .first {
+        padding: 0.8rem 0.2rem;
+    }
+
+    .head {
+        display: inline-block;
+        padding: 6px 8px;                     /* Reduz espaçamento entre os links */
+        font-size: 0.8rem;
+    }
+
+    /* Banner Principal */
+    .second {
+        height: 70vh;                         /* Altura mais confortável para telemóveis */
+    }
+
+    .second-title {
+        font-size: 2rem;                      /* Reduz o título para não quebrar linhas de forma abrupta */
+    }
+
+    .second-text {
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+    }
+
+    /* Cardápio */
+    .third {
+        padding: 2.5rem 1rem;
+    }
+
+    .third-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;           /* Exibe 1 pizza por linha */
+        gap: 1.5rem;
+    }
+
+    .card-img {
+        height: 180px;                        /* Reduz ligeiramente a foto da pizza */
+    }
+
+    /* Faixa Sobre Nós */
+    .about {
+        height: auto;
+        padding: 3rem 1.2rem;                 /* Garante que o texto caiba perfeitamente */
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+    }
+
+    /* Secção de Contacto e Botão */
+    .contact {
+        padding: 2.5rem 1rem;
+    }
+
+    .contact-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-column p {
+        font-size: 0.9rem;
+    }
+
+    .order-button {
+        width: 100%;                          /* Ocupa a largura do ecrã para facilitar o clique com o polegar */
+        max-width: 300px;
+        padding: 0.9rem 1.5rem;
+    }
+}
